@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFlow | Ecosystem</title>
+    <style>
+        :root { --bg: #f0f2f5; --text: #050505; --card: rgba(255, 255, 255, 0.9); --accent: #0066FF; }
+        [data-theme="dark"] { --bg: #050505; --text: #ffffff; --card: rgba(20, 20, 22, 0.9); --accent: #0A84FF; }
+        
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); transition: background 0.6s ease; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        
+        .card { background: var(--card); backdrop-filter: blur(20px); padding: 30px; border-radius: 30px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .btn { display: block; background: var(--accent); color: white; padding: 16px; border-radius: 20px; text-decoration: none; font-weight: 600; text-align: center; margin-top: 15px; transition: 0.3s; }
+        .btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+        
+        .policy-full { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 9999; padding: 40px; box-sizing: border-box; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">CyberFlow</h1>
+        
+        <section class="card">
+            <h2>Экосистема</h2>
+            <p>CyberFlow — это профессиональная экосистема для оптимизации игровых и системных процессов. Мы гарантируем эффективность работы вашего оборудования.</p>
+        </section>
+
+        <section class="card">
+            <h3>Инструменты</h3>
+            <a href="https://t.me/cyberflow_instruments" target="_blank" class="btn">Telegram</a>
+            <a href="https://www.tiktok.com/@.cyberflowdns" target="_blank" class="btn">TikTok</a>
+            <a href="CyberFlowDns_release.apk" class="btn" style="background: #00C853;">Скачать DNS Optimizer</a>
+            <a href="CyberFlowNexus_release.apk" class="btn" style="background: #6200EA;">Скачать Nexus Core</a>
+        </section>
+
+        <section class="card">
+            <h3>Конфигурация</h3>
+            <label><input type="checkbox" checked> Авто-оптимизация сети</label><br><br>
+            <label><input type="checkbox" checked> Очистка фоновых процессов</label>
+        </section>
+
+        <footer style="text-align: center;">
+            <p onclick="document.getElementById('policy').style.display='block'" style="cursor: pointer; text-decoration: underline;">Юридическая информация</p>
+            <br>
+            <button onclick="document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';" style="padding: 10px 20px; border-radius: 15px; cursor: pointer;">Переключить тему</button>
+        </footer>
+    </div>
+
+    <div id="policy" class="policy-full">
+        <h1>Политика конфиденциальности CyberFlow Corp</h1>
+        <p>CyberFlow Corp придает первостепенное значение защите ваших данных.</p>
+        <h3>1. Общие положения</h3>
+        <p>Настоящий документ регламентирует порядок сбора и обработки информации при использовании нашего программного обеспечения. Мы работаем исключительно локально, что исключает передачу данных на внешние серверы.</p>
+        <h3>2. Безопасность</h3>
+        <p>Наше ПО использует передовые методы шифрования для предотвращения несанкционированного доступа к системе пользователя.</p>
+        <h3>3. Отказ от ответственности</h3>
+        <p>Компания не несет ответственности за сбои, вызванные сторонним вмешательством в системные файлы ОС.</p>
+        <button class="btn" onclick="document.getElementById('policy').style.display='none'">Закрыть</button>
+    </div>
+</body>
+</html>
